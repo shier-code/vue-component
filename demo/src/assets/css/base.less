@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* a标签 */
+a {
+  color: @primary-color;
+}
+.ant-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: @content-bg;
+}
+
+.ant-btn + .ant-btn {
+  margin-left: 16px;
+}
+
+/* modal框关闭按钮滑过旋转css */
+.ant-modal-close-icon {
+  color: #bbbfc4;
+}
+.ant-modal-close-icon {
+  color: #bbbfc4;
+}
+
+.ant-modal-close-icon {
+  transition: transform 0.4s ease-out;
+}
+
+.ant-modal-close-x:hover .ant-modal-close-icon {
+  transform: rotateZ(180deg);
+}
+
+body,
+html {
+  overflow-y: auto;
+  font-family: "Microsoft YaHei";
+
+  /* 滚动条 */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+  }
+
+  /*定义滚动条轨道 内阴影+圆角*/
+  ::-webkit-scrollbar-track {
+    border-radius: 3.5px;
+    background-color: transparent;
+  }
+
+  /*定义滑块 内阴影+圆角*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: @primary-color;
+    background-color: #ebeef1;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: @primary-color;
+    background-color: #ebeef1;
+  }
+
+  //带图标的输入框，内前置图标位置
+  .ant-input-affix-wrapper .ant-input-prefix {
+    left: 10px;
+  }
+
+  //空数据表格 提示
+  .no-promission {
+    .ant-table-empty .ant-table-placeholder {
+      height: 100px;
+      line-height: 70px;
+      font-size: 18px;
+    }
+  }
+}
+
+//返回按钮
+.goback-icon {
+  display: inline-block;
+  width: 46px;
+  text-align: right;
+  font-size: 20px;
+  color: #929699;
+}
+
+//日期选择框 翻页按钮颜色加深
+.ant-calendar-header {
+  .ant-calendar-prev-month-btn::before,
+  .ant-calendar-prev-year-btn::before,
+  .ant-calendar-prev-year-btn::after,
+  .ant-calendar-next-month-btn::before,
+  .ant-calendar-next-year-btn::before,
+  .ant-calendar-next-year-btn::after {
+    border-color: black;
+  }
+}
+.ant-calendar-header {
+  .ant-calendar-prev-month-btn:hover::before,
+  .ant-calendar-prev-year-btn:hover::before,
+  .ant-calendar-prev-year-btn:hover::after,
+  .ant-calendar-next-month-btn:hover::before,
+  .ant-calendar-next-year-btn:hover::before,
+  .ant-calendar-next-year-btn:hover::after {
+    border-color: #409fff;
+  }
+}
+//去除表格行分割线
+// .ant-table-tbody > tr > td {
+//   border-bottom: none;
+//   transition: background 0.3s;
+// }
+.ant-skeleton-content .ant-skeleton-title {
+  width: 100%;
+  height: 16px;
+  margin-top: 16px;
+  background: #ffffff;
+}
+.ant-skeleton-content .ant-skeleton-paragraph > li {
+  width: 100%;
+  height: 16px;
+  list-style: none;
+  background: #ffffff;
+}
+//模块标题行
+.common-title {
+  display: flex;
+  height: 56px;
+  line-height: 56px;
+  font-size: 18px;
+  font-family: @font-family;
+  color: @font-color-title;
+}
+
+.common-operate {
+  display: flex;
+  height: 32px;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+//表格样式统一
+.ant-table {
+  .ant-table-tbody {
+    background-color: #fff;
+  }
+  .ant-table-tbody > tr > td {
+    height: 65px;
+    font-weight: 400;
+    color: @font-color-title;
+    padding: 0;
+  }
+  .ant-table-thead > tr > th {
+    font-weight: 700;
+    padding: 16px 0;
+    color: @thead-color;
+  }
+  .ant-table-row-cell-break-word {
+    background-color: #fafbfc;
+  }
+}
+.ant-table-tbody
+  > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+  > td {
+  background: #fafbfc;
+}
+//表格内样式
+.cb-t-cell {
+  min-height: 121px;
+  padding: 14px 16px;
+  .cb-t-sk {
+    width: 100%;
+    min-height: 96px;
+    // height: 128px;
+    .cb-t-les {
+      width: 100%;
+      min-height: 96px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      .cb-t-les-sub {
+        width: 100%;
+        height: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: #000000;
+        }
+      }
+      .cb-t-les-info {
+        overflow: hidden;
+        width: 100%;
+        display: block;
+        height: 21px;
+        line-height: 21px;
+        font-size: 14px;
+        text-align: left;
+        color: #616366;
+        margin-bottom: 6px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: -80px;
+      }
+      .cb-t-les-check {
+        position: absolute;
+        top: -8px;
+        right: -6px;
+        .cb-t-les-more {
+          width: 40px;
+          height: 24px;
+          padding: 0;
+          line-height: 24px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .cb-cell-fsk {
+    width: 100%;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    color: #494b4d;
+    font-size: 14px;
+  }
+}
+/* 更多 */
+.cb-t-les-m-container {
+  .title {
+    height: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: LEFT;
+    color: #616366;
+    line-height: 20px;
+    margin: 13px 0 10px 7px;
+    span {
+      margin-right: 8px;
+    }
+  }
+  .container {
+    width: max-content;
+    max-width: 804px;
+    max-height: 550px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .cb-c-td {
+      width: 185px;
+      min-height: 121px;
+      opacity: 1;
+      padding: 10px 16px;
+      background: #ffffff;
+      border: 1px solid #e1e3e5;
+      margin: 14px 7px 0 7px;
+      display: flex;
+      flex-direction: column;
+      justify-items: flex-start;
+      position: relative;
+      .cb-t-les-sub {
+        width: 100%;
+        height: 20px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: #000000;
+          text-align: left;
+        }
+      }
+      .cb-t-les-info {
+        // height: 21px;
+        // line-height: 21px;
+        font-size: 14px;
+        text-align: left;
+        color: #616366;
+        margin-bottom: 6px;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+      }
+      .cb-t-les-check {
+        position: absolute;
+        top: 6px;
+        right: 8px;
+      }
+    }
+  }
+}
+.cb-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f5f7;
+  .cb-p-filter {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 16px;
+    .cb-p-btn {
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .cb-p-tb {
+    width: 100%;
+    height: 56px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    .cb-p-week {
+      margin: 0 16px;
+      min-width: 89px;
+      height: 32px;
+      line-height: 18px;
+      text-align: center;
+      background: #f3f3f3;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #797c7f;
+      padding: 7px 9px;
+    }
+  }
+  .cb-p-list {
+    position: relative;
+    .cb-p-left {
+      z-index: 8;
+      position: absolute;
+      left: -13px;
+      top: 14px;
+    }
+    .cb-p-right {
+      z-index: 9;
+      transform: rotate(180deg);
+      position: absolute;
+      right: -13px;
+      top: 14px;
+    }
+    .gSvg {
+      width: 26px;
+      height: 26px;
+      opacity: 1;
+      cursor: pointer;
+      box-shadow: 0px 6px 8px 0px rgba(42, 191, 142, 0.15);
+    }
+  }
+}
+.com-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.com-btn-icon {
+  margin-right: 6px;
+}
+.com-check-point:after {
+  content: "*";
+  color: red;
+  margin-left: 4px;
+}
+.com-app-placeholder {
+  color: #aaaeb2;
+}
+//表单组件样式
+.wt-form-item {
+  margin-top: 12px;
+  background: #ffffff;
+}
+.wt-form-item-flex {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 10px 18px 18px;
+}
+
+// 修改 Vant 图片预览的索引样式
+.van-image-preview__index {
+  margin-top: 24px;
+}
