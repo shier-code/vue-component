@@ -14,7 +14,7 @@ jobs:
           version: 7
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 14
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm site:build
       - uses: crazy-max/ghaction-github-pages@v2
