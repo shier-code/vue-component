@@ -1,6 +1,6 @@
 {
-  "name": "jf-ui-design",
-  "version": "1.0.0",
+  "name": "@jf/ui-design",
+  "version": "1.0.2",
   "description": "",
   "keywords": [],
   "license": "ISC",
@@ -32,7 +32,6 @@
     "build": "run-s build:comp genColor  bundleLess bundleStyle bundleMin"
   },
   "dependencies": {
-    "@jf/utils": "workspace:^",
     "vue": "^3.2.35"
   },
   "devDependencies": {

@@ -4,7 +4,7 @@
  * @Author: went
  * @Date: 2023-02-08 09:55:41
  * @LastEditors: went
- * @LastEditTime: 2023-02-10 14:55:39
+ * @LastEditTime: 2023-02-10 16:36:18
  */
 import { defineUserConfig, defaultTheme, viteBundler } from 'vuepress'
 import { codeBlockPlugin } from "@yanyu-fe/vuepress-plugin-code-block";
@@ -14,12 +14,12 @@ import vueJsx from "@vitejs/plugin-vue-jsx";
 import { resolve } from 'path'
 export default defineUserConfig({
   title: "前端组件库",
-  base: process.env.NODE_ENV === "production" ? "/vue-component" : "/",
+  base: process.env.NODE_ENV === 'production' ? './' : '/',
   plugins: [codeBlockPlugin()],
   locales: {
     "/": {
       lang: "zh-CN",
-      title: "jf-ui111111"
+      title: "jf-design-ui"
     }
   },
   lang: "zh-CN",

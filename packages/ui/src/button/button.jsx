@@ -4,13 +4,12 @@
  * @Author: went
  * @Date: 2023-02-06 14:25:22
  * @LastEditors: went
- * @LastEditTime: 2023-02-09 16:51:22
+ * @LastEditTime: 2023-02-10 16:41:53
  */
-import { defineComponent } from 'vue'
-import { isStr } from '@jf/utils'
+import { defineComponent } from "vue";
 export default defineComponent({
-  name: 'JFButton',
+  name: "JFButton",
   setup() {
-    return () => <div> isStr:{isStr(22)}</div>
+    return () => <button> 这是一个按钮组件</button>;
   },
-})
+});
